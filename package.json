@@ -1,0 +1,13 @@
+{
+  "name": "whatsapp-ai-tool",
+  "version": "1.0.0",
+  "description": "AI WhatsApp Automation Tool",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
