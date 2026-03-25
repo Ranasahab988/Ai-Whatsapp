@@ -22,10 +22,10 @@ app.post("/webhook", async (req, res) => {
       console.log("User:", from);
       console.log("Message:", msgText);
 
-      await fetch(`https://graph.facebook.com/v18.0/YOUR_PHONE_NUMBER_ID/messages`, {
+      await fetch(`https://graph.facebook.com/v18.0/1017087464821642/messages`, {
         method: "POST",
         headers: {
-          "Authorization": "Bearer YOUR_ACCESS_TOKEN",
+          "Authorization": "Bearer EAAU2mgyeFZCMBRBGRKqP7ITCABIeSpoqmlwRWVXLkIW22z7JSBOfl5YEB2rumhmcpygxBvyI0d6DpDFwrjrjKSDBxOUkL5sY4le6Ru7fN9ZB1BzrpHoNx6xPU7dpeVfQDZBCgixWZAVOzlnfELlO2vja5UOZBU4XiqYEul0DLFNYrtE2UzYlO92T36UADHKRMoiPjnHTQnZChDADKOac972zkuORoWDWPmOCTWr1lqWIZBf58OkC2HukgICH9lBawGLhnK86DT9BkKIYmw4ZCJfe",
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
