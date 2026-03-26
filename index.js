@@ -25,7 +25,7 @@ app.post("/webhook", async (req, res) => {
       await fetch(`https://graph.facebook.com/v18.0/1017087464821642/messages`, {
         method: "POST",
         headers: {
-          "Authorization": "Bearer EAAU2mgyeFZCMBRBGRKqP7ITCABIeSpoqmlwRWVXLkIW22z7JSBOfl5YEB2rumhmcpygxBvyI0d6DpDFwrjrjKSDBxOUkL5sY4le6Ru7fN9ZB1BzrpHoNx6xPU7dpeVfQDZBCgixWZAVOzlnfELlO2vja5UOZBU4XiqYEul0DLFNYrtE2UzYlO92T36UADHKRMoiPjnHTQnZChDADKOac972zkuORoWDWPmOCTWr1lqWIZBf58OkC2HukgICH9lBawGLhnK86DT9BkKIYmw4ZCJfe",
+          "Authorization": "Bearer EAAU2mgyeFZCMBRPSeQTemj5xb7ZAXS00dZB48PVMZBMe5WefhRRIaNn2mSacNwmTBA3ZBK5h9tMxum5hadsjIc8fcqffMqVd69iw5CRlmKRX4JPsR6cRWKq3ruvNZCUXtaJrujXFhuD33W6FtEtRDymLueDsXSacc3FJHQT15zUzy1QH7MK20Cw2KC8ZA3ZARJpZA2mLg3lEdLAFRW66rnBxFa39tHRnJN4eyX93ydjMpj0dlwXBQXJMfsHt1e3sxZBo2ZComCem7GB5nufTdiyM4rT",
           "Content-Type": "application/json"
         },
         body: JSON.stringify({
