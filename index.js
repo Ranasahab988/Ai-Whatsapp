@@ -31,7 +31,22 @@ app.post("/webhook", async (req, res) => {
         body: JSON.stringify({
           messaging_product: "whatsapp",
           to: from,
-          text: { body: "Bhai message mil gaya ✅" }
+          type: "template",
+template: {
+  name: "welcome_msg",
+  language: { code: "en_US" },
+  components: [
+    {
+      type: "body",
+      parameters: [
+        {
+          type: "text",
+          text: "Chaman sir / mam"
+        }
+      ]
+    }
+  ]
+}
         })
       });
     }
