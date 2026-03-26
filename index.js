@@ -22,21 +22,23 @@ app.post("/webhook", async (req, res) => {
       console.log("User:", from);
       console.log("Message:", msgText);
 
-      const response = await fetch(`https://graph.facebook.com/v18.0/1017087464821642/messages`, {
-  method: "POST",
-  headers: {
-    "Authorization": "Bearer EAAU2mgyeFZCMBRPSeQTemj5xb7ZAXS00dZB48PVMZBMe5WefhRRIaNn2mSacNwmTBA3ZBK5h9tMxum5hadsjIc8fcqffMqVd69iw5CRlmKRX4JPsR6cRWKq3ruvNZCUXtaJrujXFhuD33W6FtEtRDymLueDsXSacc3FJHQT15zUzy1QH7MK20Cw2KC8ZA3ZARJpZA2mLg3lEdLAFRW66rnBxFa39tHRnJN4eyX93ydjMpj0dlwXBQXJMfsHt1e3sxZBo2ZComCem7GB5nufTdiyM4rT",
-    "Content-Type": "application/json"
-  },
-  body: JSON.stringify({
-    messaging_product: "whatsapp",
-    to: from,
-    text: { body: "Reply test ho raha hai ✅" }
-  })
-});
+      await fetch(`https://graph.facebook.com/v18.0/YOUR_PHONE_NUMBER_ID/messages`, {
+        method: "POST",
+        headers: {
+          "Authorization": "Bearer YOUR_ACCESS_TOKEN",
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          messaging_product: "whatsapp",
+          to: from,
+          text: { body: "Bhai message mil gaya ✅" }
+        })
+      });
+    }
 
-const data = await response.json();
-console.log("📤 WhatsApp API Response:", data);
+  } catch (error) {
+    console.error("Error:", error);
+  }
 
   res.sendStatus(200);
 });
