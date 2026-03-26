@@ -38,7 +38,6 @@ app.post("/webhook", async (req, res) => {
 const data = await response.json();
 console.log("📤 WhatsApp API Response:", data);
 
-  } catch (error) {
     console.error("Error:", error);
   }
 
